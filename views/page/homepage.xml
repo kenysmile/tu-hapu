@@ -1,0 +1,373 @@
+<odoo>
+    <data>
+        <template id="home_overview_1">
+            <div class="em_home_solution">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 para">
+                            <h2>GIẢI PHÁP TĂNG TRƯỞNG TUYỆT VỜI CHO NHÀ THUỐC, QUẦY THUỐC</h2>
+                            <p>
+                                <span>Chào mừng bạn đến với website Giathuocsi.com,</span><br/>
+                                <b>Giá Thuốc Sỉ</b> là website dành cho các Nhà Thuốc, Quầy Thuốc và những người kinh doanh Dược phẩm trên toàn quốc. Tại đây, bạn có thể cập nhật nhanh nhất mọi thông tin, diễn biến trên thị trường Dược phẩm. Bên cạnh đó, chúng tôi cũng mang tới Nhà Thuốc, Quầy Thuốc của bạn những sản phẩm chất lượng với mức giá tốt nhất. Giá Thuốc Sỉ cam kết tất cả những sản phẩm chúng tôi bán ra đều có xuất xứ, nguồn gốc rõ ràng, và có hóa đơn đỏ. Chúng tôi hướng tới việc xây dựng một Cộng đồng Kinh doanh Dược phẩm cùng nhau phát triển bền vững, góp phần vào sự phát triển của Ngành Dược phẩm Việt Nam, chính vì vậy, tham gia Giá Thuốc Sỉ, bạn sẽ được tiếp cận với nhiều cơ hội trao đổi kinh doanh, hợp tác cùng hơn 3000 thành viên khác và được cập nhật nhanh nhất những cơ hội đầu tư, xu hướng kinh doanh mới nhất trong ngành.
+                            </p>
+                            <button class="btn-reverse">Giới thiệu về giá thuốc sỉ</button>
+                        </div>
+                        <div class="col-md-4 ima">
+                            <img src="/website_hapu/static/src/img/em/home/Bitmap.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="home_cacbuoc">
+            <div class="em_five_step">
+            <div class="container">
+                <div class="center">
+                    <h2 class="solid">5 bước</h2>
+                    <h3>Chúng tôi giúp nhà thuốc, quầy thuốc mua sản phẩm với giá tốt nhất</h3>
+                </div>
+
+                <ul class="em_tab_pill">
+                    <li class="active"><a data-toggle="tab" href="#step1">
+                        <h4>1</h4>
+                        <p>Nghiên cứu &amp;<br/>Đánh giá sản phẩm</p>
+                    </a></li>
+                    <li><a data-toggle="tab" href="#step2">
+                        <h4>2</h4>
+                        <p>Đàm phán Chính sách giá<br/>với Nhà sản xuất</p>
+                    </a></li>
+                    <li><a data-toggle="tab" href="#step3">
+                        <h4>3</h4>
+                        <p>Giới thiệu sản phẩm tới<br/>thành viên trên hệ thống</p>
+                    </a></li>
+                    <li><a data-toggle="tab" href="#step4">
+                        <h4>4</h4>
+                        <p>Triển khai marketing<br/>hỗ trợ bán hàng</p>
+                    </a></li>
+                    <li><a data-toggle="tab" href="#step5">
+                        <h4>5</h4>
+                        <p>Hỗ trợ tư vấn bán hàng<br/>&amp; giải đáp thắc mắc</p>
+                    </a></li>
+                </ul>
+
+                <div class="tab-content em_tab_content">
+                    <div id="step1" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h5>Nghiên cứu &amp; Đánh giá sản phẩm</h5>
+                                <p>Giá Thuốc Sỉ có bộ phận chuyên biệt nghiên cứu và đánh giá sản phẩm trước khi đưa vào phân phối trên hệ thống. Tất cả sản phẩm được bán website Giathuocsi.com đều phải đảm bảo 3 tiêu chí:</p>
+                                <ol>
+                                    <li>Xuất xứ rõ ràng, có hóa đơn, chứng từ đầy đủ</li>
+                                    <li>Đạt tiêu chuẩn bộ Y tế</li>
+                                    <li>Nhu cầu thị trường lớn</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="infinity" src="/website_hapu/static/src/img/em/home/5step/3x/1.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="step2" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h5>Đàm phán Chính sách giá với Nhà sản xuất</h5>
+                                <p>Giá Thuốc Sỉ là một trong những khách hàng chiến lược và luôn được Ưu tiên hàng đầu với bất kỳ Nhà sản xuất nào chúng tôi làm việc. Thành công trong việc xây dựng mạng lưới hơn 3000 khách hàng trên Toàn quốc đã giúp chúng tôi luôn dễ dàng cam kết tiêu thụ số lượng lớn với Nhà sản xuất. Nhờ vậy, chúng tôi luôn đàm phán được những chính sách ưu đãi và chiết khấu tốt nhất. Tính đến thời điểm hiện tại, Giá Thuốc Sỉ đã trở thành Nhà phân phối độc quyền và đại lý cấp 1 của hơn 200 hãng Dược phẩm lớn trong nước và Quốc tế.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="infinity" src="/website_hapu/static/src/img/em/home/5step/3x/2.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="step3" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h5>Giới thiệu sản phẩm tới thành viên trên hệ thống</h5>
+                                <p>Sau khi đàm phán thành công với Nhà sản xuất, Giá Thuốc Sỉ tiến hành giới thiệu sản phẩm tới toàn bộ thành viên trên hệ thống. Khác với nhiều hệ thống khác, tại Giá Thuốc Sỉ, khách hàng không cần phải bỏ nhiều vốn mà vẫn mua được sản phẩm với giá tốt nhất, chúng tôi có nhiều chương trình Ưu đãi, khuyến mãi hấp dẫn ngay cả khi bạn mua từ 1 đơn vị sản phẩm.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="infinity" src="/website_hapu/static/src/img/em/home/5step/3x/3.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="step4" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h5>Triển khai marketing hỗ trợ bán hàng</h5>
+                                <p>Marketing là hoạt động luôn được Giá Thuốc Sỉ đầu tư và chú trọng. Việc triển khai các chiến dịch Marketing hỗ trợ bán hàng như một lời khẳng định trách nhiệm và quyết tâm của Giá Thuốc Sỉ trong nỗ lực không ngừng mang tới nhiều hơn nữa những sản phẩm chất lượng cho khách hàng. Bên cạnh những chiến dịch triển khai cùng Nhà sản xuất nhằm đưa sản phẩm vào thị trường, chúng tôi cũng hỗ trợ thành viên triển khai các chương trình xúc tiến bán hàng ngay tại địa chỉ Quầy Thuốc, Nhà Thuốc của họ.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="infinity" src="/website_hapu/static/src/img/em/home/5step/3x/4.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="step5" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h5>Hỗ trợ tư vấn bán hàng &amp; giải đáp thắc mắc</h5>
+                                <p>Đội ngũ tư vấn viên của Giá Thuốc Sỉ luôn sẵn sàng tư vấn, hỗ trợ bạn trong mọi khâu của công việc. Đồng hành với khách hàng trong quá trình tư vấn và bán hàng cũng là cách chúng tôi thu thập những nhận xét, đánh giá, phản hồi từ người sử dụng về sản phẩm để có những điều chỉnh phù hợp trong phương án kinh doanh và những thông tin cụ thể giúp Nhà sản xuất nghiên cứu, cải tiến sản phẩm ngày càng tốt hơn.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="infinity" src="/website_hapu/static/src/img/em/home/5step/3x/5.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </template>
+
+        <template id="home_button_1">
+            <div class="em_banner_reg" t-if="request.env.user._is_public()">
+                <div class="container">
+                    <h2>Bạn muốn mua thuốc với giá tốt nhất và luôn được cam kết về chất lượng?</h2>
+                    <button class="btn">Đăng ký ngay</button>
+                </div>
+            </div>
+        </template>
+
+        <template id="home_overview_2">
+            <div class="em_noname_info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 fr para">
+                        <h2>Cập nhật nhanh nhất mọi biến động trên thị trường Dược</h2>
+                        <p>Nắm bắt thông tin nhanh chóng, chính xác giúp bạn có những quyết định điều chỉnh kịp thời và xây dựng được chiến lược kinh doanh đúng đắn, mang lại hiệu quả cao. Tại Giá Thuốc Sỉ, bạn luôn có thể cập nhật nhanh nhất mọi thông tin nóng hổi trên thị trường Dược phẩm bao gồm những thông tin về sản phẩm mới ra mắt thị trường, những mặt hàng mới biến động giá, các mặt hàng được tiêu thụ nhiều hay những thông tư, chính sách, nghị định,… mới ban hành.</p>
+                    </div>
+                    <div class="col-md-6 ima">
+                        <img src="/website_hapu/static/src/img/em/home/23.png"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 para">
+                        <h2>Tham gia Nhóm kín trao đổi cơ hội kinh doanh, hợp tác</h2>
+                        <p>Không chỉ mang đến những công cụ hỗ trợ đắc lực cho công việc kinh doanh của bạn, Giá Thuốc Sỉ không ngừng nỗ lực xây dựng một cộng đồng kinh doanh Dược phẩm mà tại đó, tất cả thành viên đều được tiếp cận với những cơ hội kinh doanh đột phá. Với sự tham gia cố vấn của những chuyên gia hàng đầu, sự đỡ đầu từ những công ty Dược phẩm có bề dày kinh nghiệm, chúng tôi tin rằng, bạn sẽ nhanh chóng tăng trưởng quy mô và doanh thu của mình với các cơ hội tuyệt vời mà chúng tôi mang tới.</p>
+                    </div>
+                    <div class="col-md-6 ima">
+                        <img src="/website_hapu/static/src/img/em/home/24.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </template>
+
+        <template id="home_button_2">
+            <div class="em_banner_reg em_banner_reg_2" t-if="request.env.user._is_public()">
+                <div class="container">
+                    <h2>Bạn đã sẵn sàng tăng trưởng kinh doanh cùng chúng tôi?</h2>
+                    <button class="btn">Đăng ký ngay</button>
+                </div>
+            </div>
+        </template>
+
+        <template id="homepage_blog">
+            <div class="em_product_slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>SẢN PHẨM ĐANG HOT</h2>
+                        </div>
+                        <div class="col-md-6 align_right align_left_sm">
+                            <a href="#" class="view_more">Xem tất cả
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <t t-set="blog_post" t-value="website.get_blog()"/>
+                    <div id="productCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <t t-foreach="range(0, len(blog_post), 4)" t-as="count_blog">
+                                <div t-att-class="'item active' if count_blog == 0 else 'item'">
+                                    <div class="row">
+                                        <t t-set="index" t-value="min(count_blog+4, len(blog_post))"/>
+                                        <t t-foreach="blog_post[count_blog:index]" t-as="get_blog">
+                                            <div class="col-xs-3">
+                                                <a t-att-href="'/blog/%s/post/%s' % (slug(get_blog.blog_id), slug(get_blog))"
+                                                   class="product_item">
+                                                    <img t-att-src="'/web/image/blog.post/%s/image' % get_blog.id"/>
+                                                    <h3 t-esc="get_blog.name"></h3>
+                                                    <p t-esc="get_blog.subtitle"/>
+                                                </a>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                        <a class="left carousel-control" href="#productCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left em_chevron_replacel"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#productCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right em_chevron_replacer"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="container"/>
+        </template>
+
+        <template id="homepage_blog_1">
+            <div class="em_blog_slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Ưu đãi - Khuyến mãi</h2>
+                        </div>
+                        <div class="col-md-6 align_right align_left_sm">
+                            <a href="#" class="view_more">Xem tất cả
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <t t-set="blog_post" t-value="website.get_blog()"/>
+                    <div id="blogCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <t t-foreach="range(0, len(blog_post), 3)" t-as="count_blog">
+                                <div t-att-class="'item active' if count_blog == 0 else 'item'">
+                                    <div class="row">
+                                        <t t-set="index" t-value="min(count_blog+3, len(blog_post))"/>
+                                        <t t-foreach="blog_post[count_blog:index]" t-as="get_blog">
+                                            <div class="col-xs-4">
+                                                <a t-att-href="'/blog/%s/post/%s' % (slug(get_blog.blog_id), slug(get_blog))"
+                                                   class="blog_item">
+                                                    <img t-att-src="'/web/image/blog.post/%s/image' % get_blog.id"/>
+                                                    <h3 t-esc="get_blog.name"></h3>
+                                                    <p t-esc="get_blog.subtitle"/>
+                                                </a>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                        <a class="left carousel-control" href="#blogCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left em_chevron_replacel"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#blogCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right em_chevron_replacer"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="container"/>
+        </template>
+
+        <template id="homepage_blog_2">
+            <div class="em_prize_slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>hoạt động &amp; giải thưởng</h2>
+                        </div>
+                    </div>
+                    <t t-set="blog_post" t-value="website.get_blog()"/>
+                    <div id="prizeCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <t t-foreach="range(0, len(blog_post), 4)" t-as="count_blog">
+                                <div t-att-class="'item active' if count_blog == 0 else 'item'">
+                                    <div class="row">
+                                        <t t-set="index" t-value="min(count_blog+4, len(blog_post))"/>
+                                        <t t-foreach="blog_post[count_blog:index]" t-as="get_blog">
+                                            <div class="col-xs-3">
+                                                <a t-att-href="'/blog/%s/post/%s' % (slug(get_blog.blog_id), slug(get_blog))"
+                                                   class="prize_item">
+                                                    <img t-att-src="'/web/image/blog.post/%s/image' % get_blog.id"/>
+                                                    <h4 t-esc="get_blog.name"></h4>
+                                                </a>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                        <a class="left carousel-control" href="#prizeCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left em_chevron_replacel"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#prizeCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right em_chevron_replacer"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="home_overview_3">
+            <div class="em_support_info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-2">
+                                    <img src="/website_hapu/static/src/img/em/home/20.png" />
+                                </div>
+                                <div class="col-md-12 col-xs-10">
+                                    <div class="title">Đặt hàng Online 24/24, hỗ trợ nhanh chóng, chi tiết</div>
+                                </div>
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="content">
+                                        Với Giá Thuốc Sỉ, bạn có thể tra cứu Báo giá và Đặt hàng mọi lúc mọi nơi. Website của chúng tôi hoạt động 24/24 nên bạn hoàn
+                                        toàn không bị phụ thuộc vào thời gian. Đội ngũ tư vấn của Giá Thuốc Sỉ luôn sẵn sàng giải đáp
+                                        mọi thắc mắc, hỗ trợ bạn hết mình trong mọi khâu của công việc, đảm bảo bạn luôn tìm được giải
+                                        pháp tốt nhất và luôn cảm thấy hài lòng.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-2">
+                                    <img src="/website_hapu/static/src/img/em/home/21.png" />
+                                </div>
+                                <div class="col-md-12 col-xs-10">
+                                    <div class="title">Sản phẩm đa dạng, giá luôn luôn tốt</div>
+                                </div>
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="content">
+                                        Chúng tôi luôn nỗ lực mang thêm nhiều sản phẩm chất lượng bổ sung vào hệ thống phân phối của mình mỗi ngày, đảm bảo bạn có thể lấy được toàn bộ sản phẩm mình cần trong 1 lần đặt hàng duy nhất. Không chỉ tiết kiệm thời gian, chi phí đi lại, Giá Thuốc Sỉ cam kết tổng chi phí trên 1 đơn hàng của bạn luôn là thấp nhất, tất cả sản phẩm đều có giá bán để bạn so sánh và lựa chọn, bạn chỉ mua những sản phẩm có giá tốt nhất
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-2">
+                                    <img src="/website_hapu/static/src/img/em/home/22.png" />
+                                </div>
+                                <div class="col-md-12 col-xs-10">
+                                    <div class="title">Vận chuyển nhanh chóng, giao hàng tận nơi</div>
+                                </div>
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="content">
+                                        Tất cả đơn hàng trên Giá Thuốc Sỉ được thực hiện theo quy trình chuyên nghiệp, dưới sự kiểm soát của hệ thống máy tính thông minh, có camera ghi lại toàn bộ quá trình xử lý đơn hàng. Hệ thống của chúng tôi có khả năng xử lý lượng đơn hàng khổng lồ nhanh chóng, chính xác. Giờ đây, bạn có thể đặt hàng và nhận hàng ngay tại địa chỉ của mình theo đúng thời gian mà bạn mong muốn
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="homepage" inherit_id="website.homepage">
+            <xpath expr="//div[@id='wrap']" position="inside">
+                <div class="oe_structure oe_empty"/>
+                <t t-call="website_hapu.home_overview_1"/>
+                <t t-call="website_hapu.home_cacbuoc"/>
+                <t t-call="website_hapu.home_button_1"/>
+                <t t-call="website_hapu.home_overview_2"/>
+                <t t-call="website_hapu.home_button_2"/>
+                <t t-call="website_hapu.homepage_blog"/>
+                <t t-call="website_hapu.homepage_blog_1"/>
+                <t t-call="website_hapu.homepage_blog_2"/>
+                <t t-call="website_hapu.home_overview_3"/>
+
+            </xpath>
+        </template>
+    </data>
+</odoo>

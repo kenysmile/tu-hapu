@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="website_hapu_blog_post_template_inherit" inherit_id="website_blog.blog_post_complete">
+            <xpath expr="*" position="replace">
+                <t t-call="website_blog.index">
+                    <div class="container">
+                        <ul class="cc-breadcrumb">
+                            <li><a id="blog" href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post) }" t-esc="blog.name"/></li>
+                            <li><t t-esc="blog_post.name"/></li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-lg-8 cc-left-container">
+                                <div class="cc-title-small">
+                                    <span class="cc-text-span">Ngành Dược</span>
+                                    <div><t t-esc="datetime.datetime.strptime(blog_post.post_date, '%Y-%m-%d %H:%M:%S').strftime('%d/%m/%Y')"/></div>
+                                </div>
+                                <div class="cc-des-newsdetail">
+                                    <p class="cc-bigtitle"><t t-esc="blog_post.name"/></p>
+                                    <div id="content" t-field="blog_post.content" class="cc-des-newsdetail"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

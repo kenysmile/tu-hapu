@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="blog_post_inherit" model="ir.ui.view">
+        <field name="name">blog.post.custom</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <field name="image"></field>
+            </xpath>
+
+            <!--<sheet>-->
+                   <!--<xpath expr="//field[@name='tag_ids']" position="after">-->
+                       <!--<field name="content"></field>-->
+                   <!--</xpath>-->
+               <!--</sheet>-->
+        </field>
+    </record>
+</odoo>

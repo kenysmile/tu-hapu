@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--<record id="menu_introduce" model="website.menu">-->
+            <!--<field name="name">Giới thiệu</field>-->
+            <!--<field name="url">/gioi-thieu</field>-->
+            <!--<field name="parent_id" ref="website.main_menu"/>-->
+            <!--<field name="sequence" type="int">30</field>-->
+            <!--<field name="website_id" ref="website.default_website"/>-->
+        <!--</record>-->
+
+        <record id="introduce" model="ir.ui.view">
+            <field name="name">Giới thiệu</field>
+            <field name="type">qweb</field>
+            <field name="key">website.introduce</field>
+            <field name="arch" type="xml">
+                <t name="Contact Us" t-name="website.introduce">
+                    <t t-call="website.layout">
+                        <div id="wrap">
+                            <div class="oe_structure"/>
+                            <div class="container">
+                                <ul class="cc-breadcrumb">
+                                    <li><a href="\">Trang chủ</a></li>
+                                    <li>Giới thiệu</li>
+                                </ul>
+                                <div class="row">
+                                    <div class="col-lg-8 cc-left-container oe_structure">
+                                        <label class="cc-introduce-title">Giới thiệu</label>
+                                        <p>Khởi đầu từ 1 quầy thuốc nhỏ mang tên 435 tại chợ thuốc Hapu chỉ với 2 nhân
+                                            viên. Sau hơn 5 năm hoạt
+                                            động và phát triển, cùng với đội ngũ dược sĩ và nhân viên giàu kinh nghiệm,
+                                            yêu nghề. Hiện nay
+                                            Công ty CPTM Dược Vương là 1 trong những công ty cung cấp thuốc uy tín nhất
+                                            tại khu vực miền
+                                            Bắc nói chung và thủ đô Hà Nội nói riêng.
+                                        </p>
+                                        <br/>
+                                        <img width="100%" src="website_hapu/static/src/img/Bitmap.png"/>
+                                        <br/>
+                                        <br/>
+                                        <p>Giá Thuốc Hapu là website chính thức của Công ty, được chúng tôi xây dựng và
+                                            đưa vào hoạt động từ
+                                            tháng 6/2015, với mục đích cập nhật một cách nhanh chóng và chính xác về số
+                                            lượng, chủng loại
+                                            thuốc và diễn biến giá trên chợ thuốc Hapu để khách hàng có thể lên dự trù
+                                            nhanh chóng và chính
+                                            xác nhất. Sau hơn 2 năm hoạt động, nhận được sự ủng hộ và góp ý tích cực từ
+                                            phía khách hàng,
+                                            giathuochapu.com đã không ngừng nâng cấp về giao diện và tính năng, trở
+                                            thành website bán buôn
+                                            dược phẩm online đầu tiên tại Việt Nam, góp phần làm giảm tối đa chi phí và
+                                            thời gian dự trù
+                                            cho khách hàng.Với hơn 6500 sản phẩm được cập nhật đầy đủ thông tin và báo
+                                            giá trên website,
+                                            Công ty Cổ phần thương mại Dược Vương cung cấp hầu như toàn bộ các mặt hàng
+                                            thuốc, thực phẩm
+                                            chức năng và thiết bị y tế thông dụng trên thị trường. Với những tính năng
+                                            ưu việt được thiết
+                                            kế dành riêng cho khách hàng là nhà thuốc, quầy thuốc, đặt mua dược phẩm
+                                            online trên giathuochapu.com,
+                                            bạn không những được nhận sự hỗ trợ nhiệt tình từ nhân viên chăm sóc khách
+                                            hàng mà còn tiết kiệm
+                                            tối đa thời gian, chi phí hơn khi mua hàng trực tiếp tại quầy.Tầm nhìn, sứ
+                                            mệnh, giá trị cốt
+                                            lõi và phương châm hành động của Công ty CPTM Dược Vương.
+                                        </p>
+                                    </div>
+                                    <div class=" col-lg-3 cc-right-container">
+                                        <div class="cc-directory-support">
+                                            <div class="cc-directory-img">
+                                                <p class="cc-title">Danh mục tin tức</p>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Thông báo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Ngành Dược</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Kinh nghiệm</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Tuyển dụng
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cc-directory-support">
+                                            <div class="cc-directory-img">
+                                                <p class="cc-title">Khuyến mại hữu ích</p>
+                                            </div>
+                                            <div class="suggest-support">
+                                                <div class="cc-support-img">
+                                                    <a href="">
+                                                        <img src="website_hapu/static/src/img/Home_Export/khBitmap.png"/>
+                                                    </a>
+                                                </div>
+                                                <div class="cc-support-right-text">
+                                                    <p class="cc-day">13/06/2018</p>
+                                                    <span>Bổ sung thực phẩm tốt cho tuyến giáp vào khẩu phần ăn của
+                                                        mình
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="suggest-support">
+                                                <div class="cc-support-img">
+                                                    <a href="">
+                                                        <img src="website_hapu/static/src/img/Home_Export/khBitmap.png"/>
+                                                    </a>
+                                                </div>
+                                                <div class="cc-support-right-text">
+                                                    <p class="cc-day">13/06/2018</p>
+                                                    <span>Bổ sung thực phẩm tốt cho tuyến giáp vào khẩu phần ăn của
+                                                        mình
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="cc-directory-support">
+                                            <div class="cc-directory-img">
+                                                <p class="cc-title">Tin tức nổi bật</p>
+                                            </div>
+                                            <div class="suggest-support">
+                                                <div class="cc-support-img">
+                                                    <a href="">
+                                                        <img src="website_hapu/static/src/img/Home_Export/khBitmap.png"/>
+                                                    </a>
+                                                </div>
+                                                <div class="cc-support-right-text">
+                                                    <p class="cc-day">13/06/2018</p>
+                                                    <span>Bổ sung thực phẩm tốt cho tuyến giáp vào khẩu phần ăn của
+                                                        mình
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="suggest-support">
+                                                <div class="cc-support-img">
+                                                    <a href="">
+                                                        <img src="website_hapu/static/src/img/Home_Export/khBitmap.png"/>
+                                                    </a>
+                                                </div>
+                                                <div class="cc-support-right-text">
+                                                    <p class="cc-day">13/06/2018</p>
+                                                    <span>Bổ sung thực phẩm tốt cho tuyến giáp vào khẩu phần ăn của
+                                                        mình
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oe_structure"/>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+        <record id="introduce_page" model="website.page">
+            <field name="url">/gioi-thieu</field>
+            <field name="website_published">True</field>
+            <field name="view_id" ref="introduce" />
+        </record>
+
+        <!--<record id="menu_introduce" model="website.menu">-->
+            <!--<field name="page_id" ref="introduce_page" />-->
+        <!--</record>-->
+
+    </data>
+</odoo>

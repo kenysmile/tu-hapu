@@ -1,0 +1,79 @@
+.btn {
+  border: 1px solid #0087ff;
+  border-radius: 4px;
+  background-color: #0087ff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: .2s;
+}
+.btn-reverse {
+  border: 1px solid #0087ff;
+  border-radius: 4px;
+  background-color: #0087ff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: .2s;
+  background-color: white;
+  color: #0087ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a:link {
+  color: #0087ff;
+  text-decoration: none;
+}
+body {
+  color: #172b4d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  padding: 0 !important;
+  font-weight: 500;
+}
+input.entrust[type="radio"] {
+  display: none;
+}
+input.entrust[type="radio"] + label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  color: #172b4d;
+  cursor: pointer;
+}
+input.entrust[type="radio"] + label::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: solid 1px #dfe1e6;
+}
+input.entrust[type="radio"] + label::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border-radius: 12px;
+  top: 50%;
+  left: 5px;
+  margin-top: -6px;
+  transition: .2s;
+}
+input.entrust[type="radio"]:checked + label {
+  color: #0087ff;
+}
+input.entrust[type="radio"]:checked + label::before {
+  border-color: #0087ff;
+}
+input.entrust[type="radio"]:checked + label::after {
+  background-color: #0087ff;
+}

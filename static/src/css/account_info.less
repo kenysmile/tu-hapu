@@ -1,0 +1,208 @@
+
+
+h2 {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.overflow-table {
+    overflow: auto;
+}
+
+.ad_table {
+    width: 100%;
+    min-width: 768px;
+    margin-top: 22px;
+    margin-bottom: 16px;
+    border: solid 1px #ebecf0;
+    th {
+        background-color: #eef5fa;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 14px;
+        white-space: nowrap;
+        @media @mobile {
+            white-space: unset;
+        }
+    }
+    tr {
+        &:nth-child(odd) {
+            background-color: #f5fbff;
+        }
+        td {
+            padding: 26px 14px;
+            a.btn {
+                padding: 3px 20px;
+                text-transform: unset;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.em_account_info {
+    margin-top: 48px;
+    margin-bottom: 182px;
+    @media @mobile {
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+    .account {
+        margin-bottom: 48px;
+        .user_info{
+            display: table;
+            margin: 23px 0;
+            .img {
+                display: table-cell;
+                img {
+                    width: 54px;
+                    height: 54px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .text {
+                display: table-cell;
+                line-height: 1.73;
+                vertical-align: middle;
+                padding-left: 20px;
+                h3 {
+                    font-size: 15px;
+                    font-weight: 700;
+                    margin: 0;
+                    img {
+                        height: 15px;
+                    }
+                }
+                p {
+                    font-weight: 500;
+                    margin: 0;
+                    margin-top: 4px;
+                }
+            }
+        }
+
+        .address {
+            .btn_black {
+                color: @black;
+                border-color: #6b778c;
+                text-transform: unset;
+                padding: 3px 20px;
+                font-weight: 500;
+                margin: 0 6px;
+                display: inline-block;
+            }
+
+        }
+
+    }
+    .order {
+        .ad_table {
+            td {
+                padding: 13px;
+            }
+        }
+    }
+}
+
+.em_address_book {
+    // margin-top: 48px;
+    padding-bottom: 36px;
+    &.nomagrin-nopadding-sm {
+        @media @mobile {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .address_block {
+        border-bottom: 1px solid #ebecf0;
+        padding: 36px 0;
+        .ab_table {
+            width: 100%;
+            td { padding: 6px;
+                &.icon_top {
+                    vertical-align: top;
+                    img {
+                        width: 22px;
+                        height: 24px;
+                    }
+                }
+                &.action_link {
+                    text-align: right;
+                    a {
+                        font-weight: 700;
+                        display: inline-block;
+                        min-width: 90px;
+                        text-align: left;
+                        outline: none;
+                    }
+                }
+                b {
+                    margin-right: 12px;
+                }
+                .default-adress {
+                    font-size: 15px;
+                    color: #18bd5c;
+                }
+            
+            }
+        }
+        
+    }
+    .edit_form {
+        background-color: #f5fbff;
+        padding: 24px 50px;
+        margin-top: 24px;
+        &.nopadding-nobackground {
+            padding: 0;
+            background-color: unset;
+        }
+        form {
+            max-width: 512px;
+            .control {
+                margin-bottom: 16px;
+                label {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: 500;
+                    line-height: 39px;
+                    white-space: nowrap;
+                }
+                input, select {
+                    width: 100%;
+                    border-radius: 4px;
+                    border: solid 1px #dfe1e6;
+                    padding: 8px;
+                    outline: none;
+                    transition: .5s;
+                    &:focus {
+                        border-color: transparent;
+                        box-shadow: 0 0 5px @blue;
+                    }
+                }
+                .swap {
+                    display: flex;
+                    width: 100%;
+                    .col {
+                        width: 50%;
+                    }
+                    button {
+                        height: 40px;
+                        width: 98%;
+                        &.btn-reverse {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .add_address {
+        width: 176px;
+        height: 40px;
+        border-radius: 4px;
+        margin: 24px 0;
+    }
+}

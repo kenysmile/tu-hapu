@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="address_book">
+            <t t-call="website.layout">
+                <div class="container">
+                    <ul class="cc-breadcrumb">
+                        <li>
+                            <a href="#">Trang chủ</a>
+                        </li>
+                        <li>Thông tin tài khoản</li>
+                        <li>Xem sổ địa chỉ</li>
+                    </ul>
+                </div>
+                <div class="em_account_info">
+                    <div class="container">
+
+                        <div class="em_address_book">
+
+                            <h2>Sổ địa chỉ</h2>
+                            <t t-foreach="partners" t-as="partner">
+
+                                <div class="address_block">
+
+                                    <table class="ab_table">
+                                        <tr>
+                                            <td rowspan="4" class="icon_top">
+                                                <img src="website_hapu/static/src/img/em/popup/Shape.png"/>
+                                            </td>
+                                            <td colspan="3">
+                                                <b t-esc="partner.name"/>
+                                                <t t-if="default_id.id == partner.id">
+                                                    <span class="default-adress">Địa chỉ mặc định</span>
+                                                </t>
+
+                                            </td>
+                                            <td rowspan="4" class="action_link">
+                                                <a href="#" data-toggle="modal"
+                                                   t-att-data-target="'#delete%s'%partner.id">XÓA
+                                                </a>
+                                                <a t-att-href="'#edit%s'%partner.id" data-toggle="collapse">CHỈNH SỬA
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Điện thoại:</td>
+                                            <td t-esc="partner.phone"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Email:</td>
+                                            <td t-esc="partner.email"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Điạ chỉ:</td>
+                                            <td><span t-esc="partner.street"/>, <span t-esc="partner.state_id.name"/></td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="collapse edit_form" t-att-id="'edit%s'%partner.id">
+                                        <form t-attf-action="/account_info/address_book/edit_book/#{partner.id}"
+                                              method="post">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            <div class="row control">
+                                                <div class="col-md-4">
+                                                    <label>Họ tên*</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input name="name" type="text" t-att-value="partner.name"/>
+                                                </div>
+                                            </div>
+                                            <div class="row control">
+                                                <div class="col-md-4">
+                                                    <label>Số điện thoại</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input name="phone" type="text" t-att-value="partner.phone"/>
+                                                </div>
+                                            </div>
+                                            <div class="row control">
+                                                <div class="col-md-4">
+                                                    <label>Email*</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input name="email" type="text" t-att-value="partner.email"/>
+                                                </div>
+                                            </div>
+                                            <div class="row control">
+                                                <div class="col-md-4">
+                                                    <label>Tỉnh thành phố</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <select id="state_id" name="state_id">
+                                                        <option value=""><t t-esc="partner.state_id.name"/></option>
+                                                        <t t-foreach="states" t-as="s">
+                                                            <option t-att-value="s.id"
+                                                                    t-att-selected="s.id == (state and state.id or -1)">
+                                                                <t t-esc="s.name"/>
+                                                            </option>
+                                                        </t>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row control">
+                                                <div class="col-md-4">
+                                                    <label>Địa chỉ chi tiết</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input name="street" type="text" t-att-value="partner.street"/>
+                                                </div>
+                                            </div>
+                                            <t t-if="default_id.id == partner.id">
+                                                <input name="default_id" type="checkbox" checked="checked">Địa chỉ mặc định</input>
+                                            </t>
+                                            <t t-else="">
+                                                <input name="default_id" type="checkbox">Địa chỉ mặc định</input>
+                                            </t>
+                                            <!--<input name="defautt_id" type="checkbox" checked="'checked' if partner.id == default_id.id"></input>-->
+                                            <div class="row control">
+                                                <div class="col-md-4"></div>
+                                                <div class="col-md-8">
+                                                    <div class="swap">
+                                                        <div class="col">
+                                                            <button class="btn btn-reverse"
+                                                                    type="button" aria-expanded="false"
+                                                                    data-toggle="collapse"
+                                                                    t-att-data-target="'#edit%s'%partner.id">
+                                                                Hủy bỏ
+                                                            </button>
+                                                        </div>
+                                                        <div class="col">
+                                                            <button class="btn">Cập nhật</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal fade em_modal" t-att-id="'delete%s'%partner.id" tabindex="-1"
+                                         role="dialog"
+                                         aria-labelledby="exampleModalCenterTitle"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">
+                                                        <i class="fa fa-times" aria-hidden="true"></i>
+
+                                                    </span>
+                                                </button>
+                                                <div class="modal-body">
+                                                    <h2>Xóa địa chỉ</h2>
+
+                                                    <form t-attf-action="/account_info/address_book/remove_book/#{partner.id}"
+                                                          method="post">
+                                                        <input type="hidden" name="csrf_token"
+                                                               t-att-value="request.csrf_token()"/>
+
+                                                        <p>Bạn có muốn xóa địa chỉ này?</p>
+                                                        <input name="id" type="hidden"/>
+                                                        <div class="swap">
+                                                            <div class="col">
+                                                                <button class="btn btn-reverse" type="button"
+                                                                        data-dismiss="modal">Bỏ qua
+                                                                </button>
+                                                            </div>
+                                                            <div class="col">
+                                                                <button class="btn">Đồng ý</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+
+                            <button data-toggle="collapse" data-target="#add_address" type="button"
+                                    aria-expanded="false" class="btn add_address">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                Thêm địa chỉ
+                            </button>
+
+                            <div class="collapse edit_form" id="add_address">
+                                <form method="post">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <div class="row control">
+                                        <div class="col-md-4">
+                                            <label>Họ tên*</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input name="name" type="text" required="required"
+                                                   placeholder="vd: Nguyễn Văn A"/>
+                                        </div>
+                                    </div>
+                                    <div class="row control">
+                                        <div class="col-md-4">
+                                            <label>Số điện thoại</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input name="phone" type="text" required="required"
+                                                   placeholder="vd: 0912345678"/>
+                                        </div>
+                                    </div>
+                                    <div class="row control">
+                                        <div class="col-md-4">
+                                            <label>Email*</label>
+                                        </div>
+                                        <div class="col-md-8">
+
+                                            <input name="email" type="email" required="required"
+                                                   placeholder="vd: a@gmail.com"/>
+                                        </div>
+                                    </div>
+                                    <div class="row control">
+                                        <div class="col-md-4">
+                                            <label>Tỉnh thành phố</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <select id="state_id" name="state_id">
+                                                <option value=""></option>
+                                                <t t-foreach="states" t-as="s">
+                                                    <option t-att-value="s.id"
+                                                            t-att-selected="s.id == (state and state.id or -1)">
+                                                        <t t-esc="s.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row control">
+                                        <div class="col-md-4">
+                                            <label>Địa chỉ chi tiết</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input name="street" type="text" required="required"
+                                                   placeholder="vd: Khu đô thị Văn Quán"/>
+                                        </div>
+                                    </div>
+                                    <input type="checkbox" name="default_id">Địa chỉ mặc định</input>
+                                    <div class="row control">
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-8">
+                                            <div class="swap">
+                                                <div class="col">
+                                                    <button class="btn btn-reverse" data-toggle="collapse"
+                                                            data-target="#add_address" type="button"
+                                                            aria-expanded="false">Hủy bỏ
+                                                    </button>
+                                                </div>
+                                                <div class="col">
+                                                    <button class="btn">Thêm địa chỉ</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>

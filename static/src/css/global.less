@@ -1,0 +1,25 @@
+@blue: #0087ff;
+@blueLight: #339fff;
+@black: #172b4d;
+@gray: #dfe1e6;
+@fontFamily: 'Montserrat', sans-serif;
+@fontSize: 15px;
+@boderRadius: 4px;
+
+@mobile: ~"only screen and (max-width : 768px)";
+
+
+.btn {
+    border: 1px solid @blue;
+    border-radius: @boderRadius;
+    background-color: @blue;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .2s;
+}
+.btn-reverse {
+    .btn();
+    background-color: white;
+    color: @blue;
+}

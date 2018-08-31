@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="contactus_form" name="Contact Form" inherit_id="website.contactus" customize_show="True">
+            <xpath expr="//div[@id='wrap']" position="replace">
+                <div class="contact" id="contact">
+                    <div class="container">
+                        <ul class="cc-breadcrumb">
+                            <li>Trang chủ</li>
+                            <li>Liên hệ</li>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <div class="cc-main-contact">
+                            <p>Giá Thuốc Sỉ cám ơn quý khách, quý đối tác đã quan tâm tới sản phẩm và dịch vụ của chúng
+                                tôi
+                            </p>
+                            <p>Vui lòng cho chúng tôi biết sự quan tâm của quý khách</p>
+                        </div>
+                        <div class="cc-main-contact">
+                            <ul class="nav nav-pills" role="tablist">
+                                <li class="cc-tablist active" role="presentation">
+                                    <a href="#customer" aria-controls="home" role="tab" data-toggle="tab">
+                                        <p>Khách hàng mong muốn
+                                            <br/>
+                                            nhập hàng trên Giá Thuốc Sỉ
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="cc-tablist" role="presentation">
+                                    <a href="#partner" aria-controls="profile" role="tab" data-toggle="tab">Đối tác muốn
+                                        phân phối sản phẩm
+                                        <br/>
+                                        qua hệ thống của Giá Thuốc Sỉ
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="customer">
+                                    <p>Để được tư vấn dịch vụ và hỗ trợ Đặt hàng, nhập hàng qua Giá Thuốc Sỉ, bạn có thể
+                                        liên hệ với chúng tôi theo một trong những cách sau:
+                                    </p>
+                                    <br/>
+                                    <br/>
+                                    <p>Hotline Tư vấn dịch vụ và Hỗ trợ mua hàng: xxxxxxx</p>
+                                    <p>Email:
+                                        <span class="cc-textbold">Giathuocsi@gmail.com</span>
+                                    </p>
+                                    <p>Fanpage:</p>
+                                    <br/>
+                                    <br/>
+                                    <p>Hoặc gửi lời nhắn tới chúng tôi bằng cách điền vào biểu mẫu dưới đây:</p>
+                                    <form action="/website_form/" method="post" data-model_name="crm.lead"
+                                          data-success_page="/contactus-thank-you"
+                                          class="s_website_form form-horizontal container-fluid mt32 cc-form-contact"
+                                          enctype="multipart/form-data" data-editable-form="false">
+
+                                        <input type="hidden" name="company_type" value="person"/>
+
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Họ tên</span>
+                                            <div class="input-contact">
+                                                <input type="text" class="form-control o_website_form_input"
+                                                       name="contact_name"
+                                                       t-att-value="request.params.get('contact_name', '')"
+                                                       required=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Số điện thoại*</span>
+                                            <div class="input-contact">
+                                                <input type="text" class="form-control o_website_form_input"
+                                                       name="phone" placeholder="Nhập số điện thoại"
+                                                       t-att-value="request.params.get('contact_name', '')"
+                                                       required=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Email*</span>
+                                            <div class="input-contact">
+                                                <input type="text" class="form-control o_website_form_input"
+                                                       name="email_from" placeholder="Nhập Email"
+                                                       t-att-value="request.params.get('contact_name', '')"
+                                                       required=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Chủ đề*</span>
+                                            <div class="input-contact">
+                                                <input type="text" class="form-control o_website_form_input" name="name"
+                                                       placeholder="Nhập chủ đề"
+                                                       t-att-value="request.params.get('contact_name', '')"
+                                                       required=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Nội dung*</span>
+                                            <div class="input-contact" height="132px">
+                                                <textarea type="text" class="form-control o_website_form_input"
+                                                          name="description"
+                                                          placeholder="Nhập nội dung"
+                                                          t-att-value="request.params.get('contact_name', '')"
+                                                          required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="text-align-center">
+                                            <span type="submit" class="cc-button-submit btn btn-lg o_website_form_send">
+                                                GỬI
+                                            </span>
+                                            <span id="o_website_form_result"></span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="partner">
+                                    <p>Quý đối tác quan tâm tới kênh phân phối và muốn đưa sản phẩm của mình lên hệ
+                                        thống của Giá Thuốc Sỉ vui lòng liên hệ với chúng tôi theo một trong những cách
+                                        sau:
+                                    </p>
+                                    <br/>
+                                    <p>Hotline Kinh doanh:
+                                        <span class="cc-textbold">0243 95718484</span>
+                                    </p>
+                                    <p>Email:
+                                        <span class="cc-textbold">Giathuocsi@gmail.com</span>
+                                    </p>
+                                    <br/>
+                                    <p>Hoặc gửi lời nhắn tới chúng tôi bằng cách điền vào biểu mẫu dưới đây:</p>
+                                    <form action="/website_form/" method="post" data-model_name="crm.lead"
+                                          data-success_page="/contactus-thank-you"
+                                          class="s_website_form form-horizontal container-fluid mt32 cc-form-contact"
+                                          enctype="multipart/form-data" data-editable-form="false">
+
+                                        <input type="hidden" name="company_type" value="company"/>
+
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Tên Công ty*</span>
+                                            <div class="input-contact">
+                                                <input type="text" class="form-control o_website_form_input"
+                                                       name="contact_name" placeholder="Nhập tên công ty"
+                                                       t-att-value="request.params.get('contact_name', '')"
+                                                       required=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Website Công ty*</span>
+                                            <div class="input-contact">
+                                                <input type="text" class="form-control o_website_form_input"
+                                                       name="website" placeholder="Nhập website"
+                                                       t-att-value="request.params.get('contact_name', '')"
+                                                       required=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Số điện thoại*</span>
+                                            <div class="input-contact">
+                                                <input type="text" class="form-control o_website_form_input"
+                                                       name="phone" placeholder="Nhập số điện thoại"
+                                                       t-att-value="request.params.get('contact_name', '')"
+                                                       required=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Email*</span>
+                                            <div class="input-contact">
+                                                <input type="text" class="form-control o_website_form_input"
+                                                       name="email_from" placeholder="Nhập Email"
+                                                       t-att-value="request.params.get('contact_name', '')"
+                                                       required=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Chủ đề*</span>
+                                            <div class="input-contact">
+                                                <input type="text" class="form-control o_website_form_input" name="name"
+                                                       placeholder="Nhập chủ đề"
+                                                       t-att-value="request.params.get('contact_name', '')"
+                                                       required=""/>
+                                            </div>
+                                        </div>
+                                        <div class="form-contact form-field o_website_form_required_custom">
+                                            <span>Nội dung*</span>
+                                            <div class="input-contact" height="132px">
+                                                <textarea type="text" class="form-control o_website_form_input"
+                                                          name="description"
+                                                          placeholder="Nhập nội dung"
+                                                          t-att-value="request.params.get('contact_name', '')"
+                                                          required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="text-align-center">
+                                            <span type="submit" class="cc-button-submit btn btn-lg o_website_form_send">
+                                                GỬI
+                                            </span>
+                                            <span id="o_website_form_result"></span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

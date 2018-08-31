@@ -1,0 +1,64 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+a:link {
+    color: @blue;
+    text-decoration: none;
+}
+body {
+    color: @black;
+    font-family: @fontFamily;
+    font-size: @fontSize;
+    padding: 0 !important;
+    font-weight: 500;
+}
+
+
+input.entrust[type="radio"] {
+    display: none;
+    & + label {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 15px;
+        color: #172b4d;
+        cursor: pointer;
+        &::before {
+            display: inline-block;
+            vertical-align: middle;
+            content: '';
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            border: solid 1px #dfe1e6;
+        }
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background-color: transparent;
+            border-radius: 12px;
+            top: 50%;
+            left: 5px;
+            margin-top: -6px;
+            transition: .2s;
+        }
+    }
+    &:checked{
+        & + label {
+            color: @blue;
+            &::before {
+                border-color: @blue;
+            }
+            &::after {
+                background-color: @blue;
+            }
+        }
+    } 
+}

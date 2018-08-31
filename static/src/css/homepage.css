@@ -1,0 +1,20 @@
+.carousel {
+    overflow: unset;
+}
+.em_tab_content {
+    background-color: transparent;
+}
+.em_blog_slide a.blog_item img {
+    height: 214px;
+    object-fit: contain;
+}
+.em_prize_slide a.prize_item img {
+    height: 175px;
+    object-fit: contain;
+}
+.em_blog_slide a.blog_item p {
+    height: 60px;
+}
+.em_prize_slide a.prize_item h4 {
+    height: 60px;
+}

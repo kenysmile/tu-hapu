@@ -1,0 +1,77 @@
+@fontFamily: 'Montserrat', sans-serif;
+@font-weight-600: 600;
+@line-height-145: 1.47;
+@line-heigh-173: 1.73;
+@blue-color: #172b4d;
+@mau-xam-right: #f5fbff;
+@height-compo: 291px;
+@white: white;
+@wide-screen: ~'(min-width: 1199px)';
+@desktop: ~'(min-width: 991px)';
+@tablet: ~'(min-width: 767px)';
+@phone: ~'(min-width: 480px)';
+@small-phone: ~'(min-width: 320px)';
+@url-img-breadcrumb: url('https://i.imgur.com/YVmu0AJ.png');
+@font-size-15: 15px;
+@color-text-bold : #172b4d;
+
+.cc-breadcrumb {
+    margin-bottom: 73px;
+}
+.cc-main-sigupdone {
+    @media (max-width: 769px) {
+        padding-left: 15px;
+    }
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 31px;
+    .cc-top-main {
+        display: flex;
+        img {
+            width: 88px;
+            height: 88px;
+            margin-right: 23px;
+        }
+        span {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.53;
+            color: #172b4d;
+            @media (max-width: 480px) {
+                padding-top: unset;
+            }
+            padding-top: 18px;
+        }
+    }
+    .cc-body-main {
+        margin-bottom: 32px;
+        margin-top: 31px;
+        padding: 27px 30px 0 30px;
+        background-color: #f5fbff;
+        .cc-input-body {
+            border: none;
+            @media (max-width: 480px) {
+                padding-left: 30px;
+            }
+            padding-left: unset;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 2.67;
+            color: #172b4d;
+        }
+        .cc-title-input {
+            font-size: 15px;
+            line-height: 2.67;
+            color: #172b4d;
+        }
+        input {
+            background-color: #f5fbff; 
+        }
+    }
+}
+.cc-text-bold {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.73;
+    color: #172b4d;
+}

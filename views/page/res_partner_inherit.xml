@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <!-- Inherit Form View to Modify it -->
+       <record id="res_partner_inherit" model="ir.ui.view">
+           <field name="name">Res_partner_inherit</field>
+           <field name="model">res.partner</field>
+           <field name="inherit_id" ref="base.view_partner_form"/>
+           <field name="arch" type="xml">
+
+               <xpath expr="//field[@name='category_id']" position="after">
+                   <field name="dateofbird"></field>
+                   <field name="x_business_format"></field>
+                   <field name="drugstore_name"></field>
+                   <field name="default_id"></field>
+               </xpath>
+
+               <xpath expr="//field[@name='default_id']" position="attributes">
+                   <attribute name="invisible">1</attribute>
+               </xpath>
+
+           </field>
+       </record>
+
+    </data>
+</odoo>

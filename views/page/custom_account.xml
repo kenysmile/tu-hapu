@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="custom_website_account" inherit_id="portal.portal_layout">
+            <xpath expr="//div[1]" position="attributes">
+                <attribute name="style">display:none</attribute>
+            </xpath>
+            <xpath expr="//div[@id='wrap']" position="replace">
+                <t t-if="my_details">
+                    <div class="container">
+                        <ul class="cc-breadcrumb">
+                            <li>
+                                <a href="#">Trang chủ</a>
+                            </li>
+                            <li>Thông tin tài khoản</li>
+                        </ul>
+                    </div>
+                    <div class="em_account_info">
+                        <div class="container">
+
+                            <div class="account">
+                                <h2>Thông tin tài khoản</h2>
+
+                                <div class="user_info">
+                                    <div class="img">
+                                        <img t-attf-src="/web/image/res.users/{{user_id.id}}/image"/>
+                                    </div>
+                                    <div class="text">
+                                        <h3>
+                                            <t t-esc="user_id.name"/>
+                                            <img src="/website_hapu/static/src/img/em/popup/vip.png"/>
+                                        </h3>
+                                        <p>Gia nhập
+                                            <t t-if="user_id.create_date"
+                                               t-esc="datetime.datetime.strptime(user_id.create_date,'%Y-%m-%d %H:%M:%S').strftime('%d/%m/%Y')"/>
+                                            . Số điểm tích luỹ:
+                                            <b>104</b>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="address">
+                                    <div class="overflow-table">
+                                        <table class="ad_table">
+                                            <tr>
+                                                <th>Ngày sinh</th>
+                                                <th>Số điện thoại</th>
+                                                <th>Email</th>
+                                                <th>Tên Nhà Thuốc, Quầy thuốc, Phòng khám</th>
+                                                <th>Địa chỉ mặc định</th>
+                                                <th></th>
+                                            </tr>
+                                            <tr>
+                                                <td t-esc="user_id.dateofbird"></td>
+                                                <td t-esc="user_id.phone"></td>
+                                                <td t-esc="user_id.email"></td>
+                                                <td t-esc="user_id.drugstore_name"></td>
+                                                <td t-esc="user_id.street"></td>
+                                                <td>
+                                                    <a class="btn">Sổ địa chỉ</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="text-right">
+                                        <a href="/my/account" class="btn-reverse btn_black">Sửa thông tin tài khoản</a>
+                                        <a href="#" class="btn-reverse btn_black">Đổi mật khẩu</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order">
+
+                                <h2>Danh sách đơn hàng</h2>
+
+                                <div class="overflow-table">
+                                    <table class="ad_table">
+                                        <tr>
+                                            <th>Ngày đặt hàng</th>
+                                            <th>Mã số đơn hàng</th>
+                                            <th>Tình trạng</th>
+                                            <th>Tổng tiền</th>
+                                            <th></th>
+                                        </tr>
+                                        <t t-foreach="website.get_sale_order_login_user()" t-as="sale_order">
+                                            <tr>
+                                                <td t-esc="datetime.datetime.strptime(sale_order.date_order,'%Y-%m-%d %H:%M:%S').strftime('%d/%m/%Y')"></td>
+                                                <td t-esc="sale_order.name"></td>
+                                                <td>Đã hoàn thành</td>
+                                                <td t-esc="sale_order.amount_total" t-options="{'widget': 'monetary','from_currency': sale_order.currency_id,'display_currency': sale_order.currency_id}"></td>
+                                                <td>
+                                                    <a href="#">Xem chi tiết</a>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                <t t-else="">
+                    <div class="container">
+                        <ul class="cc-breadcrumb">
+                            <li>
+                                <a href="#">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="#">Thông tin tài khoản</a>
+                            </li>
+                            <li>Sửa thông tin tài khoản</li>
+                        </ul>
+                    </div>
+                    <div class="em_account_info">
+                        <div class="container">
+
+                            <div class="account em_address_book nomagrin-nopadding-sm">
+                                <h2>Sửa Thông tin tài khoản</h2>
+                                <div class="edit_form nopadding-nobackground">
+                                    <form action="/my/account" method="post">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div t-if="error_message" class="alert alert-danger">
+                                                    <t t-foreach="error_message" t-as="err">
+                                                        <t t-esc="err"/>
+                                                        <br/>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div t-attf-class="form-group #{error.get('name') and 'has-error' or ''} row control">
+                                            <div class="col-md-4">
+                                                <label for="name">Họ tên*</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" name="name" t-att-value="user_id.name"/>
+                                            </div>
+                                        </div>
+                                         <div t-attf-class="form-group #{error.get('dateofbird') and 'has-error' or ''} row control">
+                                            <div class="col-md-4">
+                                                <label for="dateofbird">Ngày sinh</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" name="dateofbird" t-att-value="user_id.dateofbird"/>
+                                            </div>
+                                        </div>
+                                        <div t-attf-class="form-group #{error.get('email') and 'has-error' or ''} row control">
+                                            <div class="col-md-4">
+                                                <label for="email">Email</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="email" name="email" t-att-value="user_id.email"/>
+                                            </div>
+                                        </div>
+                                        <div t-attf-class="form-group #{error.get('phone') and 'has-error' or ''} row control">
+                                            <div class="col-md-4">
+                                                <label for="phone">Phone</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="tel" name="phone" t-att-value="user_id.phone"/>
+                                            </div>
+                                        </div>
+                                        <div t-attf-class="form-group #{error.get('drugstore_name') and 'has-error' or ''} row control">
+                                            <div class="col-md-4">
+                                                <label for="hostname">Tên nhà thuốc</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" name="drugstore_name" t-att-value="user_id.drugstore_name"/>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="redirect" t-att-value="redirect"/>
+                                        <div class="row control">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-8">
+                                                <div class="swap">
+                                                    <div class="col">
+                                                        <a href="/my/home">
+                                                        <button class="btn btn-reverse"
+                                                                type="button" aria-expanded="false"
+                                                                data-toggle="collapse" data-target="#id_duy_nhat1">Hủy
+                                                            bỏ
+                                                        </button>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <button type="submit" class="btn">Cập nhật</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,470 @@
+<odoo>
+    <data>
+        <template id="layout_header_copyright" inherit_id="website.layout" name="Header Copyright">
+            <xpath expr="//header" position="replace">
+                <header>
+                    <div class="em_overlay"></div>
+                    <div class="em_header_sm">
+                        <img class="logo" src="website_hapu/static/src/img/em/logo.png" width="170" height="45"/>
+                        <button class="notify js_open_sidebar"></button>
+                        <!-- TODO: t-call this -->
+                        <div class="notify">
+                            <img src="https://dummyimage.com/22x22"/>
+                            <span class="new"></span>
+                        </div>
+                    </div>
+                    <div class="em_header">
+                        <div class="main">
+                            <div class="container">
+                                <div class="logo">
+                                    <img src="website_hapu/static/src/img/em/logo.png" width="240" height="55"/>
+                                </div>
+                                <div class="service">
+                                    <ul>
+                                        <li>
+                                            <img src="website_hapu/static/src/img/em/home/3x/1.png" width="32"
+                                                 height="32"/>
+                                            <div class="info">
+                                                <p class="label">Tư vấn dịch vụ</p>
+                                                <p class="phone">0246 6886 555</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="website_hapu/static/src/img/em/home/3x/2.png" width="32"
+                                                 height="32"/>
+                                            <div class="info">
+                                                <p class="label">Tư vấn dịch vụ</p>
+                                                <p class="phone">0246 6886 555</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="website_hapu/static/src/img/em/home/3x/4.png" width="32"
+                                                 height="32"/>
+                                            <div class="info">
+                                                <p class="label">Tư vấn dịch vụ</p>
+                                                <p class="phone">0246 6886 555</p>
+                                            </div>
+                                        </li>
+                                        <!-- TODO: t-call this -->
+                                        <!-- TODO: Hide/show for logout/login -->
+                                        <!-- Important: Do not delete this  -->
+
+                                        <!-- LOGED -->
+                                        <t t-if="not user_id._is_public()">
+                                            <li class="notify">
+                                                <div class="dropdown show notify">
+                                                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"
+                                                       id="notify_dropdown">
+                                                        <img src="website_hapu/static/src/img/em/home/6.png" width="22"
+                                                             height="22"/>
+                                                        <span class="new"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown_notify"
+                                                         aria-labelledby="notify_dropdown">
+                                                        <div class="notify_header">Bạn có 3 tin nhắn</div>
+                                                        <a class="notify_item" href="#">Thông báo: Miễn phí vận chuyển
+                                                            cho
+                                                            khách hàng đặt đơn từ 0-3h sáng ngày 20/3/2018
+                                                        </a>
+                                                        <a class="notify_item" href="#">Thông báo: Miễn phí vận chuyển
+                                                            cho
+                                                            khách hàng đặt đơn từ 0-3h sáng ngày 20/3/2018
+                                                        </a>
+                                                        <a class="notify_item" href="#">Lorem ipsum dolor sit amet
+                                                            consectetur, adipisicing elit. Aspernatur porro pariatur
+                                                            aliquam! Minus repudiandae, reiciendis odit, recusandae
+                                                            expedita
+                                                            reprehenderit ratione nobis illo iusto praesentium, eos
+                                                            natus
+                                                            iure ipsum impedit enim, nhớ mặt tao...
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown show user">
+                                                <a class="dropdown-toggle" href="#" data-toggle="dropdown"
+                                                   id="user_dropdown">
+                                                    <img src="website_hapu/static/src/img/em/home/3x/5.png" width="32"
+                                                         height="32"/>
+                                                    <span t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name"/>
+                                                </a>
+                                                <div class="dropdown-menu dropdown_menu"
+                                                     aria-labelledby="user_dropdown">
+                                                    <a class="dropdown-item" href="/my/home">Tài khoản</a>
+                                                    <a class="dropdown-item" t-attf-href="/web/session/logout?redirect=/">Đăng xuất</a>
+                                                </div>
+                                            </li>
+                                        </t>
+                                        <t t-else="">
+                                            <li>
+                                                <a class="no-decorate" href="#" data-toggle="modal"
+                                                   data-target="#login_form">
+                                                    <img src="website_hapu/static/src/img/em/home/3x/3.png" width="32"
+                                                         height="32"/>
+                                                    <div class="info">
+                                                        <p class="label">Tài khoản</p>
+                                                        <p class="phone">Đăng ký / Đăng nhập</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu">
+                            <div class="container">
+                                <ul>
+                                    <li class="active">
+                                        <a href="/">Trang chủ</a>
+                                    </li>
+                                    <li>
+                                        <a href="/gioi-thieu">Giới thiệu</a>
+                                    </li>
+                                    <li>
+                                        <a href="/shop">Đặt hàng</a>
+                                    </li>
+                                    <li>
+                                        <a href="/blog/our-blog-1">Sản phẩm mới</a>
+                                    </li>
+                                    <li>
+                                        <a href="/blog/our-blog-1">Tin tức</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hỗ trợ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bán hàng cùng chúng tôi</a>
+                                    </li>
+                                    <li>
+                                        <a href="/contactus">Liên hệ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Form đăng nhập -->
+                    <div class="modal fade em_modal" id="login_form" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                                <div class="modal-body">
+                                    <h2>Đăng nhập</h2>
+
+                                    <form role="form" t-attf-action="/web/login{{ '?debug' if debug else '' }}" method="post" onsubmit="this.action = this.action + location.hash">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <p>
+                                            Chào mừng bạn quay trở lại với Giá Thuốc Sỉ!
+                                            <br/>
+                                            Đăng nhập ngay để cập nhật những thông tin mới nhất bạn đã bỏ lỡ.
+                                        </p>
+                                        <div class="control invinput">
+                                            <input name="login" type="text" t-att-value="login" id="login" placeholder="Tên đăng nhập"/>
+                                        </div>
+
+                                        <div class="group invinput">
+                                            <input name="password" class="left_comp" type="password"
+                                                   placeholder="Nhập mật khẩu"/>
+                                            <div class="right_comp">
+                                                <a href="#" title="Nhấn vào đây để khôi phục mật khẩu!">Quên mật khẩu
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <p>
+                                            Đừng quên tham gia cộng đồng Giá Thuốc Sỉ trên facebook tại <a href="#">
+                                            đây
+                                        </a> bạn nhé!
+                                        </p>
+                                        <button class="btn">Đăng nhập</button>
+                                    </form>
+
+                                    <p class="note">
+                                        Bạn chưa có tài khoản? <a href="#" class="js_open_reg_form">Đăng ký</a> ngay
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form đăng ký -->
+                    <div class="modal fade em_modal em_modal_reg" id="reg_form" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                                <div class="modal-body">
+                                    <h2>ĐĂNG KÝ TÀI KHOẢN</h2>
+                                    <form action="/web/login">
+                                        <p class="welcome">
+                                            Chào mừng bạn đến với Giá Thuốc Sỉ, website số 1 về bán sỉ Dược phẩm. Để
+                                            tham gia Cộng đồng Giá Thuốc Sỉ và sử dụng những tiện ích trên website, vui
+                                            lòng đăng ký thông tin bằng cách điền vào biểu mẫu dưới đây
+                                        </p>
+
+                                        <h3>THÔNG TIN TÀI KHOẢN</h3>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Tên đăng nhập*</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input name="username" type="text" placeholder="Nhập tên đăng nhập"/>
+                                            </div>
+                                        </div>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Điện thoại*</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input name="phone" type="text" placeholder="Nhập số điện thoại"/>
+                                            </div>
+                                        </div>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Mật khẩu*</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input name="password" type="password" placeholder="Nhập mật khẩu"/>
+                                            </div>
+                                        </div>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Nhập lại mật khẩu*</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input name="repassword" type="password"
+                                                       placeholder="Nhập lại mật khẩu"/>
+                                            </div>
+
+                                        </div>
+
+                                        <h3>THÔNG TIN Khách hàng</h3>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Tên khách hàng*</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input name="name" type="text" placeholder="vd: Nguyễn Văn A"/>
+                                            </div>
+                                        </div>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Sinh nhật</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input name="dateofbird" type="text" placeholder="vd: 31/12/1982"/>
+                                            </div>
+                                        </div>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Hình thức kinh doanh</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input class="entrust" type="radio" name="business_format"
+                                                               value="1" id="drugstore" checked="checked"/>
+                                                        <label for="drugstore">Nhà thuốc</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input class="entrust" type="radio" name="business_format"
+                                                               value="2" id="drugstores"/>
+                                                        <label for="drugstores">Quầy thuốc</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input class="entrust" type="radio" name="business_format"
+                                                               value="3" id="clinic"/>
+                                                        <label for="clinic">Phòng khám</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input class="entrust" type="radio" name="business_format"
+                                                               value="4" id="pharmaceutical_representatives"/>
+                                                        <label for="pharmaceutical_representatives">Trình dược viên
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Tên Quầy*</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input name="drugstore_name" type="text"
+                                                       placeholder="Nhập tên nhà thuốc, quầy thuốc, phòng..."/>
+                                            </div>
+                                        </div>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input name="email" type="email" placeholder="example@email.com"/>
+                                            </div>
+                                        </div>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Địa chỉ giao hàng*</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input name="address" type="text" placeholder="Nhập địa chỉ giao hàng"/>
+                                            </div>
+                                        </div>
+                                        <div class="row control">
+                                            <div class="col-md-4">
+                                                <label>Tỉnh/Thành phố*</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <select name="city" class="js_city_select">
+                                                    <optgroup label="Thành phố">
+                                                        <option value="saab">TP. Hà Nội</option>
+                                                        <option value="volvo">TP. Hồ Chí Minh</option>
+                                                    </optgroup>
+                                                    <optgroup label="Vịnh Bắc Bộ">
+                                                        <option value="mercedes">Thái Bình</option>
+                                                        <option value="audi">Phú Thọ</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn">Đăng ký</button>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </xpath>
+        </template>
+
+        <template id="layout_footer_copyright" inherit_id="website.layout" name="Footer Copyright">
+            <xpath expr="//footer" position="replace">
+                <footer>
+                    <!-- Footer here -->
+                    <div class="footer" id="footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8  col-md-8 col-sm-6 col-xs-12 cc-text-footer">
+                                    <ul class="cc-ul-infofooter">
+                                        <li class="cc-footer-title">Giá Thuốc Sỉ là website thuộc sở hữu của Công ty Cổ
+                                            phần
+                                            Dược Hapu
+                                        </li>
+                                        <li class="cc-footer-des">
+                                            <p>Địa chỉ: 134/1 Tô Hiến Thành, Phường 15, Quận 10, Tp Hồ Chí Minh, Việt
+                                                Nam
+                                            </p>
+                                            <p>Hotline: 08183717183</p>
+                                            <p>Email: Giathuocsi@gmail.com</p>
+                                        </li>
+                                        <li class="cc-footer-des">
+                                            <p>Bản quyền thuộc Công ty Cổ phần Dược Hapu.
+                                                <br/>
+                                                Số chứng nhận đăng ký kinh doanh: 0107437032 (Số chứng nhận đủ điều kiện
+                                                kinh doanh thuốc)
+                                            </p>
+                                            <div>
+                                                <img src="website_hapu/static/src/img/Home_Export/FBitmap.png"/>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cc-image-footer">
+                                    <li>
+                                        <a href="#">
+                                            <img src="website_hapu/static/src/img/Home_Export/Group 49.png"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="website_hapu/static/src/img/Home_Export/Group 47.png"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="website_hapu/static/src/img/Home_Export/Group 47 Copy.png"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="website_hapu/static/src/img/Home_Export/Group 47 Copy 2.png"/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="website_hapu/static/src/img/Home_Export/Group 47 Copy 3.png"/>
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </xpath>
+        </template>
+        <template inherit_id="portal.pager" id="pager">
+            <xpath expr="*" position="replace">
+                <div class="container pagination-div">
+                    <!--Pagination-->
+                    <div class="pagination-div-child">
+                        <ul t-if="pager['page_count'] > 1" class="pagination">
+
+                            <!--Arrow left-->
+                            <li t-att-class=" 'page-item disabled' if pager['page']['num'] == 1 else 'page-item' ">
+                                <a class="page-link"
+                                   t-att-href=" pager['page_previous']['url'] if pager['page']['num'] != 1 else None"
+                                   aria-label="Previous">
+                                    <span aria-hidden="true">
+                                        <img src="/website_hapu/static/src/img/previous.svg"/>
+                                    </span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+
+                            <!--Numbers-->
+                            <t t-foreach="pager['pages']" t-as="page">
+                                <li class="page-item">
+                                    <a t-att-class=" 'page-link active' if page['num'] == pager['page']['num'] else 'page-link' "
+                                       t-att-href="page['url']" t-raw="page['num']"></a>
+                                </li>
+                            </t>
+                            <!--Arrow right-->
+                            <li t-att-class=" 'page-item disabled' if pager['page']['num'] == pager['page_count'] else 'page-item' ">
+                                <a class="page-link"
+                                   t-att-href="pager['page_next']['url'] if pager['page']['num'] != pager['page_count'] else None"
+                                   aria-label="Next">
+                                    <span aria-hidden="true">
+                                        <img src="/website_hapu/static/src/img/next.svg"/>
+                                    </span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div t-if="pager['page_count'] > 1" class="input-group cc-go-page">
+                            <input type="text" class="form-control input_number_page" placeholder="Số trang"/>
+                            <input id="link_number_hidden" type="hidden"
+                                   t-att-value="str(pager['base_url']) + '/page/'"/>
+                            <input id="page_count" type="hidden" t-att-value="pager['page_count']"/>
+                            <input id="url_args" type="hidden" t-att-value="pager['url_args']"/>
+                            <span class="input-group-btn">
+                                <button class="btn btn-default cc-button-gopage">
+                                    <i class="fa">Đi</i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

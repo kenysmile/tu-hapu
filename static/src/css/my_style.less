@@ -1,0 +1,228 @@
+@fontFamily: 'Montserrat', sans-serif;
+@font-weight-600: 600;
+@line-height-145: 1.47;
+@line-heigh-173: 1.73;
+@blue-color: #172b4d;
+@mau-xam-right: #f5fbff;
+@height-compo: 291px;
+@white: white;
+@wide-screen: ~'(min-width: 1199px)';
+@desktop: ~'(min-width: 991px)';
+@tablet: ~'(min-width: 767px)';
+@phone: ~'(min-width: 480px)';
+@small-phone: ~'(min-width: 320px)';
+@url-img-breadcrumb: url('https://i.imgur.com/YVmu0AJ.png');
+
+.border-bottom-cddbe4{
+    border-bottom: 1px solid #cddbe4;
+}
+.font-size-13 {
+    font-size: 13px;
+}
+.margin-13-top-bot {
+    margin-bottom: 13px;
+    margin-top: 13px;
+}
+.font-white {
+    font-family: @fontFamily;
+    color: @white;
+}
+.padding-17-40 {
+    padding-top: 17px;
+    padding-bottom: 40px;
+}
+.padding-top-33 {
+    padding-top: 33px;
+}
+.display-flex {
+    display: flex;
+}
+.cc-footer-title {
+    font-weight: @font-weight-600;
+    line-height: @line-height-145;
+    .font-white
+}
+.cc-ul-infofooter {
+    list-style-type: none;
+}
+.cc-footer-des {
+    line-height: @line-heigh-173;
+    .margin-13-top-bot;
+    .font-white;
+    .font-size-13;
+    @media @small-phone { 
+        .margin-13-top-bot;
+    }
+}
+.cc-footer-des img {
+    width: 147px;
+}
+.cc-footer-des:last-child {
+    @media @wide-screen, @desktop {
+        .display-flex;
+    }
+}
+.footer {
+    background-color: @blue-color;
+    @media @small-phone { .padding-17-40;}
+    @media @wide-screen { 
+        .padding-top-33;
+        height: @height-compo;
+    }
+}
+.cc-image-footer {
+    .display-flex;
+    .margin-13-top-bot;
+    @media @small-phone {
+        margin-top: -10px;
+    }
+    @media @small-phone {
+        margin: unset;
+    }
+}
+.cc-right-container {
+    @media @wide-screen {
+        width: 30%;
+        margin-left: 35px;
+    }
+}
+.cc-breadcrumb li+li:before{
+    background-image: @url-img-breadcrumb;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 12px;
+    content: '';
+}
+.cc-breadcrumb {
+    .cc-ul-infofooter;
+    .font-size-13;
+    .margin-13-top-bot;
+}
+.cc-breadcrumb li {
+    display: inline;
+}
+.cc-support-post {
+    @media @wide-screen, @desktop,@tablet {
+        .display-flex;
+        .border-bottom-cddbe4;
+    }
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.cc-support-img {
+    @media @wide-screen, @desktop,@tablet {
+        width: 36%;
+        margin-right: 30px;
+    }
+}
+.cc-support-img img {
+    width: 100%;
+}
+.cc-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: @line-height-145;
+    color: #172b4d;
+    @media @phone, @small-phone {
+        margin-top: 10px;
+    }
+    @media @tablet {
+        margin-top: unset;
+    }
+}
+.cc-support-left-text span {
+    font-size: 15px;
+    line-height: 1.47;
+    color: #172b4d;
+}
+.cc-directory-support ul {
+    .cc-ul-infofooter;
+}
+.cc-directory-support {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background-color: @mau-xam-right;
+    padding: 20px;
+}
+.cc-directory-img {
+    .border-bottom-cddbe4;
+}
+.cc-directory-img .cc-title {
+    margin: 10px;
+}
+.cc-directory-support ul li {
+    margin: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.cc-directory-support ul li a {
+    color: #172b4d;
+}
+.suggest-support {
+    @media @wide-screen, @desktop,@tablet {
+        .display-flex;
+    }
+    margin-top: 13px;
+    margin-bottom: 27px;
+    .font-size-13;
+}
+.suggest-support .cc-support-img {
+    @media @wide-screen{
+        width: 100%;
+        margin-right: 10px;
+    }
+}
+.cc-day {
+    color: #6b778c;
+}
+.text-upper {
+    width: 100%;
+}
+.small-title {
+    .cc-day;
+    font-size: 13px;
+    .display-flex;
+    margin-bottom: 13px;
+}
+.pagination-div {
+    text-align: center;
+    @media @wide-screen, @desktop,@tablet {
+        margin-top: 40px;
+        margin-bottom: 150px;
+    }
+}
+.pagination-div .page-link {
+    .cc-day;
+    margin-right: 11px;
+    border-radius: 4px;
+    background-color: #f5fbff;
+}
+.pagination-div .active {
+    .cc-button-gopage;
+}
+.cc-go-page {
+    width: 125px;
+    height: 35px;
+    @media @wide-screen, @desktop,@tablet {
+        margin-top: 20px;
+        margin-bottom: unset;
+    }
+    @media (max-width: 766px) {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+.pagination-div-child {
+    @media @wide-screen, @desktop,@tablet {
+        .display-flex;
+        max-width: 530px;
+        margin: 0 auto;
+    }
+}
+.cc-button-gopage {
+    background-color: #0087ff;
+    color: #ffffff;
+}

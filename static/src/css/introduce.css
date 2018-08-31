@@ -1,0 +1,16 @@
+.cc-introduce-title {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  color: #172b4d;
+}
+.cc-left-container .cc-introduce-title {
+  margin-top: 57px;
+  margin-bottom: 27px;
+}
+.cc-left-container p {
+  color: #172b4d;
+}
+.cc-right-container {
+  margin-top: 30px;
+}

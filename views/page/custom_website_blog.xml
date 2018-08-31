@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="custom_website_blog" inherit_id="website_blog.blog_post_short">
+            <xpath expr="*" position="replace">
+                <t t-call="website_blog.index">
+                    <div class="support" id="support">
+                        <div class="container">
+                            <ul class="cc-breadcrumb">
+                                <li>Trang chủ</li>
+                                <li>Tin tức</li>
+                            </ul>
+                            <div class="row">
+                                <t t-set="blog_post" t-value="website.get_blog()"/>
+                                <div class="col-lg-8 cc-left-container">
+                                    <t t-foreach="blog_post" t-as="detail_blog">
+                                        <div class="cc-support-post">
+                                            <div class="cc-support-img">
+                                                <a t-att-href="'/blog/%s/post/%s' % (slug(detail_blog.blog_id), slug(detail_blog))">
+                                                    <img t-att-src="'/web/image/blog.post/%s/image' % detail_blog.id"/>
+                                                </a>
+                                            </div>
+                                            <div class="cc-support-left-text">
+                                                    <div class="small-title">
+                                                        <t t-foreach="detail_blog.tag_ids" t-as="one_tag">
+                                                            <a class="text-upper"
+                                                               t-attf-href="#{blog_url(tag=one_tag.id)}"
+                                                               t-esc="one_tag.name"/>
+                                                        </t>
+                                                        <div t-esc="datetime.datetime.strptime(detail_blog.post_date,'%Y-%m-%d %H:%M:%S').strftime('%d/%m/%Y')"></div>
+                                                    </div>
+                                                    <p class="cc-title" t-esc="detail_blog.subtitle"></p>
+                                                    <span>Để đáp ứng nhu cầu dự trù hàng hóa ngày càng cao và nâng cao tốc
+                                                        độ
+                                                        xử lý
+                                                        đơn hàng, nâng cao chất lượng dịch vụ
+                                                    </span>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </div>
+                                <div class=" col-lg-3 cc-right-container">
+                                    <div class="cc-directory-support">
+                                        <div class="cc-directory-img">
+                                            <p class="cc-title">Danh mục tin tức</p>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Thông báo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Ngành Dược</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Kinh nghiệm</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Tuyển dụng
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="cc-directory-support">
+                                        <div class="cc-directory-img">
+                                            <p class="cc-title">Khuyến mại hữu ích</p>
+                                        </div>
+                                        <div class="suggest-support">
+                                            <div class="cc-support-img">
+                                                <a href="">
+                                                    <img src="website_hapu/static/src/img/Home_Export/khBitmap.png"/>
+                                                </a>
+                                            </div>
+                                            <div class="cc-support-right-text">
+                                                <p class="cc-day">13/06/2018</p>
+                                                <span>Bổ sung thực phẩm tốt cho tuyến giáp vào khẩu phần ăn của mình
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="suggest-support">
+                                            <div class="cc-support-img">
+                                                <a href="">
+                                                    <img src="website_hapu/static/src/img/Home_Export/khBitmap.png"/>
+                                                </a>
+                                            </div>
+                                            <div class="cc-support-right-text">
+                                                <p class="cc-day">13/06/2018</p>
+                                                <span>Bổ sung thực phẩm tốt cho tuyến giáp vào khẩu phần ăn của mình
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cc-directory-support">
+                                        <div class="cc-directory-img">
+                                            <p class="cc-title">Tin tức nổi bật</p>
+                                        </div>
+                                        <div class="suggest-support">
+                                            <div class="cc-support-img">
+                                                <a href="">
+                                                    <img src="website_hapu/static/src/img/Home_Export/khBitmap.png"/>
+                                                </a>
+                                            </div>
+                                            <div class="cc-support-right-text">
+                                                <p class="cc-day">13/06/2018</p>
+                                                <span>Bổ sung thực phẩm tốt cho tuyến giáp vào khẩu phần ăn của mình
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="suggest-support">
+                                            <div class="cc-support-img">
+                                                <a href="">
+                                                    <img src="website_hapu/static/src/img/Home_Export/khBitmap.png"/>
+                                                </a>
+                                            </div>
+                                            <div class="cc-support-right-text">
+                                                <p class="cc-day">13/06/2018</p>
+                                                <span>Bổ sung thực phẩm tốt cho tuyến giáp vào khẩu phần ăn của mình
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <t t-call="portal.pager"/>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

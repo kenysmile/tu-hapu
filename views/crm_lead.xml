@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="crm_lead_id" model="ir.actions.act_window">
+            <field name="name">Crm_Lead</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="crm_lead_form_id" model="ir.ui.view">
+            <field name="name">Crm_Lead</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="before">
+                    <div class="oe_title">
+                        <field name="company_type" widget="radio" class="oe_edit_only" options="{'horizontal': true}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='contact_name']" position="replace"></xpath>
+
+                <xpath expr="//field[@name='phone']" position="after">
+                    <field name="contact_name"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

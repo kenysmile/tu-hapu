@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="mystyle" name="My style" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link rel="stylesheet" type="text/css" href="/website_hapu/static/src/css/font.css" />
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/global.less"/>
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/header.less"/>
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/main.less"/>
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/home.less"/>
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/contact.less"/>
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/news_detail.less"/>
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/my_style.less"/>
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/account_info.less"/>
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/homepage.css"/>
+            <link rel="stylesheet" type="text/less" href="/website_hapu/static/src/css/custom_style.less"/>
+        </xpath>
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/website_hapu/static/src/js/header.js"/>
+            <script type="text/javascript" src="/website_hapu/static/src/js/portal_pager.js"/>
+        </xpath>
+    </template>
+
+</odoo>

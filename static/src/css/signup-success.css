@@ -1,0 +1,66 @@
+.cc-breadcrumb {
+  margin-bottom: 73px;
+}
+.cc-main-sigupdone {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 31px;
+}
+@media (max-width: 769px) {
+  .cc-main-sigupdone {
+    padding-left: 15px;
+  }
+}
+.cc-main-sigupdone .cc-top-main {
+  display: flex;
+}
+.cc-main-sigupdone .cc-top-main img {
+  width: 88px;
+  height: 88px;
+  margin-right: 23px;
+}
+.cc-main-sigupdone .cc-top-main span {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.53;
+  color: #172b4d;
+  padding-top: 18px;
+}
+@media (max-width: 480px) {
+  .cc-main-sigupdone .cc-top-main span {
+    padding-top: unset;
+  }
+}
+.cc-main-sigupdone .cc-body-main {
+  margin-bottom: 32px;
+  margin-top: 31px;
+  padding: 27px 30px 0 30px;
+  background-color: #f5fbff;
+}
+.cc-main-sigupdone .cc-body-main .cc-input-body {
+  border: none;
+  padding-left: unset;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 2.67;
+  color: #172b4d;
+}
+@media (max-width: 480px) {
+  .cc-main-sigupdone .cc-body-main .cc-input-body {
+    padding-left: 30px;
+  }
+}
+.cc-main-sigupdone .cc-body-main .cc-title-input {
+  font-size: 15px;
+  line-height: 2.67;
+  color: #172b4d;
+}
+.cc-main-sigupdone .cc-body-main input {
+  background-color: #f5fbff;
+}
+.cc-text-bold {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.73;
+  color: #172b4d;
+}
